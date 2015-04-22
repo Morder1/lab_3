@@ -46,6 +46,10 @@ public class Main {
             num = 0;
             flag = false;
         }
+        if (word.matches("[тТ]ысяч.?")) {
+            num *= 1000;
+            return;
+        }
         System.out.print(word + " ");
     }
 
