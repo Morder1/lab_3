@@ -41,14 +41,14 @@ public class Main {
                 return;
             }
         }
+        if (word.matches("[тТ]ысяч.?")) {
+            num *= 1000;
+            return;
+        }
         if (flag) {
             System.out.print(num + " " );
             num = 0;
             flag = false;
-        }
-        if (word.matches("[тТ]ысяч.?")) {
-            num *= 1000;
-            return;
         }
         System.out.print(word + " ");
     }
@@ -64,8 +64,11 @@ public class Main {
             );
             while ((line = br.readLine()) != null) {
                 String word[] = line.split(" " );
-                for (int i = 0; i < word.length; i++)
+                for (int i = 0; i < word.length; i++){
                     print(word[i]);
+                if(i==word.length-1)
+                    print("");
+                }
                 System.out.println();
             }
             br.close();
