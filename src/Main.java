@@ -34,6 +34,13 @@ public class Main {
                 return;
             }
         }
+        for (int i = 0; i < 10; i++) {
+            if (word.matches(digit[i])) {
+                num += i;
+                flag = true;
+                return;
+            }
+        }
         if (flag) {
             System.out.print(num + " " );
             num = 0;
