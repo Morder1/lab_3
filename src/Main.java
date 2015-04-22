@@ -20,6 +20,13 @@ public class Main {
                 return;
             }
         }
+        for (int i = 0; i < 10; i++) {
+            if (word.matches(ten[i])) {
+                num += i * 10;
+                flag = true;
+                return;
+            }
+        }
         if (flag) {
             System.out.print(num + " " );
             num = 0;
